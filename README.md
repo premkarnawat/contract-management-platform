@@ -10,12 +10,6 @@ The focus of this project is on product thinking, clean UI flow, controlled stat
 
 ---
 
-## Live Demo
-
-[View Live Application](https://id-preview--2b07a6f8-a22b-43c3-8919-635b4bc7dfa0.lovable.app)
-
----
-
 ## Features
 
 ### Blueprint Management
