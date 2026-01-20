@@ -188,7 +188,7 @@ src/
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/premkarnawat/contract-management-platform.git
 cd contract-management-platform
 
 # Install dependencies
