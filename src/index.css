@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Contract Management Platform Design System */
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 217 91% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 215 20% 95%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 215 20% 93%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 215 20% 93%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 50%;
+
+    --radius: 0.375rem;
+
+    /* Status Colors */
+    --status-signed: 142 71% 45%;
+    --status-signed-foreground: 0 0% 100%;
+    --status-signed-bg: 142 76% 95%;
+    
+    --status-pending: 38 92% 50%;
+    --status-pending-foreground: 0 0% 100%;
+    --status-pending-bg: 38 92% 95%;
+    
+    --status-active: 217 91% 50%;
+    --status-active-foreground: 0 0% 100%;
+    --status-active-bg: 217 91% 95%;
+    
+    --status-draft: 215 16% 47%;
+    --status-draft-foreground: 0 0% 100%;
+    --status-draft-bg: 215 20% 95%;
+    
+    --status-revoked: 0 0% 45%;
+    --status-revoked-foreground: 0 0% 100%;
+    --status-revoked-bg: 0 0% 95%;
+
+    /* Canvas */
+    --canvas-bg: 0 0% 100%;
+    --canvas-grid: 214 32% 95%;
+    --canvas-field: 217 91% 97%;
+    --canvas-field-border: 217 91% 80%;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 217 91% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 20% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 217 91% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  .status-badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .field-item {
+    @apply flex items-center gap-2 p-2.5 rounded-md border border-border bg-card cursor-grab transition-colors;
+  }
+
+  .field-item:hover {
+    @apply bg-accent border-primary/30;
+  }
+
+  .canvas-field {
+    @apply absolute border-2 border-dashed rounded-md bg-canvas-field flex items-center justify-center text-sm font-medium;
+    border-color: hsl(var(--canvas-field-border));
+    background-color: hsl(var(--canvas-field) / 0.5);
+  }
+
+  .table-header {
+    @apply bg-muted/50 text-muted-foreground text-xs font-medium uppercase tracking-wider;
+  }
+}
