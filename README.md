@@ -256,9 +256,3 @@ npm run preview
 ## License
 
 This project was created for assignment purposes.
-
----
-
-## Author
-
-Built with [Lovable](https://lovable.dev)
